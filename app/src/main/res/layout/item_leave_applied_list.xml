@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/leave_cover_item_background"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="0.55"
+                android:background="@drawable/leave_upper_item_background"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.62">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingStart="5dp"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/userName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Name:"
+                                android:textColor="@color/liteGrey1" />
+
+                            <TextView
+                                android:id="@+id/requestDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/userName"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Request Date:"
+                                android:textColor="@color/liteGrey1" />
+
+                            <TextView
+                                android:id="@+id/requestStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/requestDate"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Status:"
+                                android:textColor="@color/liteGrey1" />
+
+                            <TextView
+                                android:id="@+id/requestStage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/requestStatus"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Stage:"
+                                android:textColor="@color/liteGrey1" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.38">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/userNameHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Name:" />
+
+                            <TextView
+                                android:id="@+id/requestDateHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/userNameHolder"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Request Date:" />
+
+                            <TextView
+                                android:id="@+id/requestStatusHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/requestDateHolder"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Status:" />
+
+                            <TextView
+                                android:id="@+id/requestStageHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/requestStatusHolder"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="Stage:" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonViewLeaveApplyItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/light_orange"
+                        android:text="VIEW"
+                        android:textColor="@color/white"
+                        app:cornerRadius="5dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonEditLeaveApplyItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_below="@id/buttonViewLeaveApplyItem"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/light_blue1"
+                        android:text="Edit"
+                        android:textColor="@color/white"
+                        app:cornerRadius="5dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="0.45"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/userLocationTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="UserLocationTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/userLocationHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="UserLocationHolder" />
+
+                    <TextView
+                        android:id="@+id/startDateTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="StartDateTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/startDateHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="StartDateHolder" />
+
+                    <TextView
+                        android:id="@+id/lvDurationTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="LvDurationTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/lvDurationHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="LvDurationHolder" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:id="@+id/requestNoTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="requestNoTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/requestNoHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="requestNoHolder" />
+
+                    <TextView
+                        android:id="@+id/endDateTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="endDateTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/endDateHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="endDateHolder" />
+
+                    <TextView
+                        android:id="@+id/noLvApplyTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="noLvApplyTag"
+                        android:textColor="@color/liteGrey1" />
+
+                    <TextView
+                        android:id="@+id/noLvApplyHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="noLvApplyHolder" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

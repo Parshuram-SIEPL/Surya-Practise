@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
-        binding.button.setOnClickListener {
-
-            val intent = Intent(this, LeaveApplyActivity::class.java)
-            startActivity(intent)
-
-
-        }
+//
+//        binding.button.setOnClickListener {
+//
+//            val intent = Intent(this, LeaveApplyActivity::class.java)
+//            startActivity(intent)
+//
+//
+//        }
 
     }
 }

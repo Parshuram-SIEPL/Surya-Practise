@@ -8,9 +8,9 @@ import androidx.lifecycle.MutableLiveData
 
 class NetworkConnection {
 
-    private var networkState: MutableLiveData<Boolean> = MutableLiveData()
+    private var networkState: MutableLiveData<NetworkInfo> = MutableLiveData()
 
-    val mNetWorkState: MutableLiveData<Boolean>
+    val mNetWorkState: MutableLiveData<NetworkInfo>
         get() = networkState
 
     fun isNetWorkAvailable(context: Context) {
@@ -21,6 +21,18 @@ class NetworkConnection {
         var activeNetworkInfo: NetworkInfo? = manager.activeNetworkInfo
 
 
-
+        if (activeNetworkInfo != null) {
+            if (activeNetworkInfo.isAvailable){
+                networkState.postValue(activeNetworkInfo)
+            }
+            else{
+                networkState.postValue(null)
+            }
+        }
+        else{
+            networkState.postValue(null)
+        }
     }
+
+
 }

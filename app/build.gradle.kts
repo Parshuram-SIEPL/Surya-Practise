@@ -48,4 +48,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    implementation(libs.retrofit)
+
+    implementation(libs.retrofit2.converter.gson)
+
+    implementation (libs.kotlinx.coroutines.android)
+    implementation (libs.kotlinx.coroutines.core)
+
+    //lifecycle scope
+    implementation (libs.androidx.lifecycle.runtime.ktx)
+
+    //viewModel scope
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 }
