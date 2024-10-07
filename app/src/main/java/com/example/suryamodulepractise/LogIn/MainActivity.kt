@@ -1,10 +1,10 @@
 package com.example.suryamodulepractise.LogIn
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.suryamodulepractise.R
 import com.example.suryamodulepractise.databinding.ActivityMainBinding
-import com.example.suryamodulepractise.leaveApply.Activity.LeaveApplyActivity
+import com.example.suryamodulepractise.leaveApply.fragments.LeaveAppliedListFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-//
-//        binding.button.setOnClickListener {
-//
-//            val intent = Intent(this, LeaveApplyActivity::class.java)
-//            startActivity(intent)
-//
-//
-//        }
+
+        binding.button.setOnClickListener {
+
+            var transition = supportFragmentManager.beginTransaction()
+            transition.replace(R.id.leaveACFrameLayout, LeaveAppliedListFragment())
+            transition.commit()
+
+        }
+
 
     }
 }

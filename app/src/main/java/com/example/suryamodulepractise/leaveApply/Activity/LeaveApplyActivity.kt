@@ -9,7 +9,7 @@ import com.example.suryamodulepractise.leaveApply.ViewModels.LeaveApplyViewModel
 
 class LeaveApplyActivity : AppCompatActivity() {
 
-val leaveViewmodel by lazy { LeaveApplyViewModel(Application()) }
+//val leaveViewmodel by lazy { LeaveApplyViewModel(Application()) }
 
     lateinit var test : TextView
 
@@ -19,19 +19,20 @@ val leaveViewmodel by lazy { LeaveApplyViewModel(Application()) }
 
 //        test = findViewById(R.id.userName)
 
-        var userDetails: HashMap<String,String> = HashMap()
-        userDetails.put("user_id", "693")
-        userDetails.put("auth", "b71a9d2ffff42ffa7f9cb2e26fe0d233")
+//        var userDetails: HashMap<String,String> = HashMap()
+//        userDetails.put("user_id", "693")
+//        userDetails.put("auth", "b71a9d2ffff42ffa7f9cb2e26fe0d233")
 
 
-        leaveViewmodel.getUserLeaveApplyDetails(userDetails)
+//        leaveViewmodel.getUserLeaveApplyDetails(userDetails)
+//
+//        leaveViewmodel.applyRequestData.observe(this){
+//
+//
+////            test.text = it?.get(0)?.fullname
+//
+//        }
 
-        leaveViewmodel.applyRequestData.observe(this){
-
-
-//            test.text = it?.get(0)?.fullname
-
-        }
 
 
 
