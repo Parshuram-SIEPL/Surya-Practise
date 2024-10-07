@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".leaveApply.fragments.ViewDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/leave_cover_item_background"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bold_bg"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/detailUserNameTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:-"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/detailUserNameHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="userName"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detailUserDeptTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Department"
+
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserDeptHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userDept"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailRepo.PersonTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reporting Person"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailRepo.PersonHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailRepo.PersonHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserFdateTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From Date"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserFdateHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From date"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserWorkTypeTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserWorkTypeHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailUserWorkTypeHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserNo.FDayTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Day"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserNo.FDayHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userNo.FDay"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserLvBalanceTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave Balance"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserLvBalanceHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userLeave Balance"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailNoPaidLvTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. Of Paid Leave"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailNoPaidLvHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailNoPaidLvHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserRsnLvTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reason Of Leave"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserRsnLvHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailUserRsnLvHolder"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detailUserLocationTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locaton"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserLocationHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userLocation"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserLvTypeTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave Type"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserLvTypeHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dtlUserLvTypeHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserToDateTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Date"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserToDateHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dtlUserToDateHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserLvDurationTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leave Duration"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detailUserLvDurationHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailUserLvDurationHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserNoHdayTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Half Day"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserNoHdayHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="userNoHday"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserTLvApplyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Leave Apply"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlUserTLvAplyHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detailUserTLvAplyHolder"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlNo.UnpaidLvTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. Of Unpaid Leave"
+                    android:textColor="@color/liteGrey1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dtlNo.UnpaidLvHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dtlNo.UnpaidLvHolder"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leave Applied :-"
+                android:layout_margin="2dp"
+                android:paddingStart="5dp"
+                android:background="@drawable/semibold_bg"
+                android:textSize="18sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailsViewRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semibold_bg"
+                android:text="Approrival Action Message :-"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

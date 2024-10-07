@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
             var transition = supportFragmentManager.beginTransaction()
             transition.replace(R.id.leaveACFrameLayout, LeaveAppliedListFragment())
+            transition.addToBackStack("fragmentFirst")
             transition.commit()
 
         }

@@ -42,14 +42,19 @@ class LeaveAppliedListFragment : Fragment() {
         userDetails.put("auth", "b71a9d2ffff42ffa7f9cb2e26fe0d233")
 
 
+
+
+
+
         leaveApplyViewModel.getUserLeaveApplyDetails(userDetails)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
 
         leaveApplyViewModel.applyRequestData.observe(this as LifecycleOwner){
 
-            recyclerView.adapter = LeaveAppliedListAdapter(it)
+            recyclerView.adapter = LeaveAppliedListAdapter(it,parentFragmentManager)
         }
+
 
 
 
