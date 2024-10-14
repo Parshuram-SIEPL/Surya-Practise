@@ -15,12 +15,22 @@
         />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:text="Get List"
         app:layout_constraintBottom_toTopOf="@+id/leaveACFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Get List"
+        app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/raiseLeaveRequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Raise Request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

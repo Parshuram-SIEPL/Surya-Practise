@@ -10,7 +10,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.suryamodulepractise.R
-import com.example.suryamodulepractise.leaveApply.DataModels.DataDetail
 import com.example.suryamodulepractise.leaveApply.ViewModels.LeaveApplyViewModel
 import com.example.suryamodulepractise.leaveApply.adapters.LeaveAppliedListAdapter
 
@@ -18,13 +17,12 @@ import com.example.suryamodulepractise.leaveApply.adapters.LeaveAppliedListAdapt
 class LeaveAppliedListFragment : Fragment() {
 
     val leaveApplyViewModel by lazy { LeaveApplyViewModel(Application()) }
-//    lateinit var datalist : List<DataDetail>
+
 
     lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
         return inflater.inflate(R.layout.fragment_leave_applied_list, container, false)
@@ -35,9 +33,7 @@ class LeaveAppliedListFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.leaveAppliedListRecyclerView)
 
-//        datalist = emptyList()
-
-        var userDetails: HashMap<String,String> = HashMap()
+        var userDetails: HashMap<String, String> = HashMap()
         userDetails.put("user_id", "693")
         userDetails.put("auth", "b71a9d2ffff42ffa7f9cb2e26fe0d233")
 
@@ -50,24 +46,12 @@ class LeaveAppliedListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
 
-        leaveApplyViewModel.applyRequestData.observe(this as LifecycleOwner){
+        leaveApplyViewModel.applyRequestData.observe(this as LifecycleOwner) {
 
-            recyclerView.adapter = LeaveAppliedListAdapter(it,parentFragmentManager)
+            recyclerView.adapter = LeaveAppliedListAdapter(it, parentFragmentManager)
         }
 
-
-
-
-
-
-
-
-
-
-
     }
-
-
 
 
 }

@@ -1,12 +1,10 @@
 package com.example.suryamodulepractise.leaveApply.DataModels
 
 data class LeaveAppliedListModel(
-    val data_details: List<DataDetail>,
-    val message: String,
-    val status: String
+    val data_details: List<LeaveListItemDataModel>, val message: String, val status: String
 )
 
-data class DataDetail(
+data class LeaveListItemDataModel(
     val aprv_sts: String,
     val edit_sts: String,
     val from_date: String,
@@ -66,8 +64,35 @@ data class ApprvTrail(
 )
 
 data class LeaveApplied(
-    val dated: String,
-    val frststhlf: String,
-    val full_day: String,
-    val second_half: String
+    val dated: String, val frststhlf: String, val full_day: String, val second_half: String
+)
+
+data class RaiseRequestDataModel(
+    val data_details: List<RaiseRequestDetails>,
+    val disable_dates: List<DisableDate>,
+    val holiday_dates: List<HolidayDate>,
+    val message: String,
+    val status: String
+)
+
+data class RaiseRequestDetails(
+    val department_id: String,
+    val dept_head: String,
+    val dept_name: String,
+    val leave_balance: Int,
+    val loc_type: String,
+    val location_id: String,
+    val location_name: String,
+    val mstrid: String,
+    val name: String,
+    val reporting_prsn: String,
+    val srvc_id: String
+)
+
+data class DisableDate(
+    val disabledate: List<String>, val ldt: String
+)
+
+data class HolidayDate(
+    val holiday_date: String, val holiday_desc: String, val holiday_val: String
 )

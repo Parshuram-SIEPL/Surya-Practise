@@ -57,30 +57,29 @@ class ViewDetailsFragment : Fragment() {
         leaveApplyViewModel.getUserLeaveDetailsView(userDetalsForView)
 
 
-        leaveApplyViewModel.mleaveDetailsViewData.observe(this as LifecycleOwner){
+        leaveApplyViewModel.mLeaveDetailsViewData.observe(this as LifecycleOwner){
 
 
-            binding.detailUserNameHolder.text = it.all_details[0].fullname
-            binding.detailUserDeptHolder.text = it.all_details[0].dept_name
-            binding.detailRepoPersonHolder.text = it.all_details[0].reportingprsn
-            binding.detailUserFdateHolder.text = it.all_details[0].from_date
-            binding.detailUserWorkTypeHolder.text = it.all_details[0].type
-            binding.detailUserNoFDayHolder.text = it.all_details[0].fullday
-            binding.detailUserLvBalanceHolder.text = it.all_details[0].lv_balance
-            binding.dtlNoUnpaidLvHolder.text = it.all_details[0].no_of_unpaid
-            binding.detailNoPaidLvHolder.text = it.all_details[0].no_of_paid
-            binding.detailUserRsnLvHolder.text = it.all_details[0].res_of_lv
-            binding.detailUserLocationHolder.text = it.all_details[0].lname
-            binding.dtlUserLvTypeHolder.text = it.all_details[0].lv_type
-            binding.dtlUserToDateHolder.text = it.all_details[0].to_date
-            binding.detailUserLvDurationHolder.text = it.all_details[0].lv_duration
-            binding.dtlUserNoHdayHolder.text = it.all_details[0].halfday
-            binding.dtlUserTLvAplyHolder.text = it.all_details[0].t_lv_apply
-
+            with(binding){
+                detailUserNameHolder.text = it.all_details[0].fullname
+                detailUserDeptHolder.text = it.all_details[0].dept_name
+                detailRepoPersonHolder.text = it.all_details[0].reportingprsn
+                detailUserFdateHolder.text = it.all_details[0].from_date
+                detailUserWorkTypeHolder.text = it.all_details[0].type
+                detailUserNoFDayHolder.text = it.all_details[0].fullday
+                detailUserLvBalanceHolder.text = it.all_details[0].lv_balance
+                dtlNoUnpaidLvHolder.text = it.all_details[0].no_of_unpaid
+                detailNoPaidLvHolder.text = it.all_details[0].no_of_paid
+                detailUserRsnLvHolder.text = it.all_details[0].res_of_lv
+                detailUserLocationHolder.text = it.all_details[0].lname
+                dtlUserLvTypeHolder.text = it.all_details[0].lv_type
+                dtlUserToDateHolder.text = it.all_details[0].to_date
+                detailUserLvDurationHolder.text = it.all_details[0].lv_duration
+                dtlUserNoHdayHolder.text = it.all_details[0].halfday
+                dtlUserTLvAplyHolder.text = it.all_details[0].t_lv_apply
+            }
 
             recyclerView.adapter = LeaveViewDetailsAdapter(it.leave_applied)
-
-
         }
 
 

@@ -5,22 +5,27 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.suryamodulepractise.leaveApply.DataModels.DataDetail
+import com.example.suryamodulepractise.leaveApply.DataModels.LeaveListItemDataModel
 import com.example.suryamodulepractise.leaveApply.DataModels.LeaveAppliedItemViewDetailsModel
+import com.example.suryamodulepractise.leaveApply.DataModels.RaiseRequestDataModel
 import com.example.suryamodulepractise.leaveApply.repository.LeaveApplyRepository
 import kotlinx.coroutines.launch
 
 class LeaveApplyViewModel(application: Application) : AndroidViewModel(application) {
 
 
-    private val leaveApplyData: MutableLiveData<List<DataDetail>> = MutableLiveData()
+    private val leaveApplyData: MutableLiveData<List<LeaveListItemDataModel>> = MutableLiveData()
 
-    val applyRequestData: LiveData<List<DataDetail>> get() = leaveApplyData
+    val applyRequestData: LiveData<List<LeaveListItemDataModel>> get() = leaveApplyData
 
 
     private val leaveDetailsViewData: MutableLiveData<LeaveAppliedItemViewDetailsModel> = MutableLiveData()
 
-    val mleaveDetailsViewData: LiveData<LeaveAppliedItemViewDetailsModel> get() = leaveDetailsViewData
+    val mLeaveDetailsViewData: LiveData<LeaveAppliedItemViewDetailsModel> get() = leaveDetailsViewData
+
+    private val raiseLeaveRequestData: MutableLiveData<RaiseRequestDataModel> = MutableLiveData()
+
+    val mRaiseLeaveRequestData: LiveData<RaiseRequestDataModel> get() = raiseLeaveRequestData
 
 
     fun getUserLeaveApplyDetails(userDetails: Map<String, String>) {
@@ -61,6 +66,17 @@ class LeaveApplyViewModel(application: Application) : AndroidViewModel(applicati
                 }
             }
 
+        }
+    }
+    fun getUserRaiseLeaveRequest(userDetails: Map<String, String>) {
+        viewModelScope.launch {
+            val response = LeaveApplyRepository.callRaiseLeaveRequestAPI(userDetails)
+
+            if (response.isSuccessful) {
+                if (response.body()?.status == "200") {
+                    raiseLeaveRequestData.postValue(response.body())
+                }
+            }
         }
     }
 
