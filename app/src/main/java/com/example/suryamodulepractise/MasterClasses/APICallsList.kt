@@ -1,5 +1,6 @@
 package com.example.suryamodulepractise.MasterClasses
 
+import com.example.suryamodulepractise.Menu.DataModels.MenuDevModel
 import com.example.suryamodulepractise.leaveApply.DataModels.LeaveAppliedItemViewDetailsModel
 import com.example.suryamodulepractise.leaveApply.DataModels.LeaveAppliedListModel
 import com.example.suryamodulepractise.leaveApply.DataModels.RaiseRequestDataModel
@@ -18,5 +19,9 @@ interface APICallsList {
 
     @POST(APIList.raise_leave_request)
     suspend fun requestRaiseLeaveRequest(@Body userDetails: Map<String, String>): Response<RaiseRequestDataModel>
+
+    @POST(APIList.get_user_menu)
+    suspend fun getUserMenu(@Body userDetails: Map<String, String>): Response<MenuDevModel>
+
 
 }

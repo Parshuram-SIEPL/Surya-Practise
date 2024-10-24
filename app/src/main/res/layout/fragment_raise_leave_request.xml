@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,15 +11,20 @@
         android:id="@+id/inputNameField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:hint="Name">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/userNameLvApply"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:editable="false"
+            android:padding="10dp"
 
             />
+
+        
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,14 +32,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/inputNameField"
-        android:layout_margin="10dp"
-        android:hint="Name">
+        android:layout_margin="5dp"
+        android:hint="Department name"
+        app:hintTextColor="@color/orange">
 
-        <com.google.android.material.textfield.TextInputEditText
+
+        <AutoCompleteTextView
             android:id="@+id/userDptNameLvApply"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:inputType="textAutoComplete"
+            android:padding="10dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,14 +52,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/inputDptNameField"
-        android:layout_margin="10dp"
-        android:hint="Name">
+        android:layout_margin="5dp"
+        android:hint="Reporting Person name"
+        app:hintTextColor="@color/orange">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/userReportingPersonNameLvApply"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:editable="false"
+            android:padding="10dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,14 +71,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/reportingPersonNameField"
-        android:layout_margin="10dp"
-        android:hint="Name">
+        android:layout_margin="5dp"
+        android:hint="Location"
+        app:hintTextColor="@color/orange">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/userLocationNameLvApply"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:editable="false"
+            android:padding="10dp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,16 +90,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/locationNameField"
-        android:layout_margin="10dp"
-        android:hint="Name">
+        android:layout_margin="5dp"
+        android:hint="Leave Type"
+        app:hintTextColor="@color/orange">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/userLeaveTypeLvApply"
+        <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="45dp"
+            android:imeOptions="actionNext"
+            android:inputType="none"
+            android:padding="10dp" />
 
-            />
     </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/startDateField"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/locationNameField"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:hint="Name"-->
+<!--        app:hintTextColor="@color/orange">-->
+
+<!--        <AutoCompleteTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:imeOptions="actionNext"-->
+<!--            android:inputType="none"-->
+<!--            android:padding="10dp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/endDateField"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/locationNameField"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:hint="Name"-->
+<!--        app:hintTextColor="@color/orange">-->
+
+<!--        <AutoCompleteTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:imeOptions="actionNext"-->
+<!--            android:inputType="none"-->
+<!--            android:padding="10dp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
 </RelativeLayout>
