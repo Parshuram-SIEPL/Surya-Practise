@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/expandCollapseIcon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
 
             android:src="@drawable/dot_icon"
             />
@@ -29,7 +29,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:paddingStart="8dp"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/light_orange" />
         <!-- Expand/Collapse Icon -->
 
     </LinearLayout>
