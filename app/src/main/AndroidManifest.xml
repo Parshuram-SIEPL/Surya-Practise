@@ -16,13 +16,19 @@
         android:theme="@style/Theme.SuryaModulePractise"
         tools:targetApi="31">
         <activity
-            android:name=".Menu.MenuActivity"
+            android:name=".Menu.MenuActivity2"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu.MenuActivity"
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".testClasses.SelectionTestActivity"
@@ -34,6 +40,7 @@
             android:name=".LogIn.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
+
         </activity>
         <activity
             android:name=".leaveApply.Activity.LeaveApplyActivity"

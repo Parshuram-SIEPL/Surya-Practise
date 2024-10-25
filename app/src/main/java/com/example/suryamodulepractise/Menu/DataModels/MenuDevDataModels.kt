@@ -11,3 +11,9 @@ data class Menu(
     val menuName: String,
     val parentId: String
 )
+
+data class MenuItem(
+    val menu: Menu,
+    var isExpanded: Boolean = false,
+    var children: MutableList<MenuItem> = mutableListOf()
+)
