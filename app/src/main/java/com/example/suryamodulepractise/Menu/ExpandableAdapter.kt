@@ -12,9 +12,14 @@ import com.example.suryamodulepractise.Menu.DataModels.MenuItem
 import com.example.suryamodulepractise.R
 
 class ExpandableAdapter(
-    private var items: List<MenuItem>,
-    private val clickListener: (MenuItem) -> Unit
+    private var items: List<MenuItem>, private val clickListener: (MenuItem) -> Unit
 ) : RecyclerView.Adapter<ExpandableAdapter.ViewHolder>() {
+
+    private var lastAdapterPosition = -1
+    private var currentAdapterPosition = -1
+    private var lastChildAdapterPosition = -1
+    private var currentChildAdapterPosition = -1
+
 
     // Base ViewHolder type
     abstract class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -26,7 +31,8 @@ class ExpandableAdapter(
         private val parentLayout: LinearLayout = itemView.findViewById(R.id.parent_item_layout)
         private val textView: TextView = itemView.findViewById(R.id.parent_text_view)
         private val expandCollapseIcon: ImageView = itemView.findViewById(R.id.expandCollapseIcon)
-        private val childRecyclerView: RecyclerView = itemView.findViewById(R.id.child_recycler_view)
+        private val childRecyclerView: RecyclerView =
+            itemView.findViewById(R.id.child_recycler_view)
 
         override fun bind(item: MenuItem) {
             textView.text = item.menu.menuName
@@ -49,6 +55,26 @@ class ExpandableAdapter(
 
             // Click listener for expand/collapse functionality
             textView.setOnClickListener {
+
+                if (lastAdapterPosition == -1 && currentAdapterPosition == -1) {
+
+                    currentAdapterPosition = adapterPosition
+                    lastAdapterPosition = adapterPosition
+                } else {
+                    lastAdapterPosition = currentAdapterPosition
+                    currentAdapterPosition = adapterPosition
+                }
+
+                if (adapterPosition != lastAdapterPosition) {
+                    if (items[lastAdapterPosition].isExpanded) {
+                        items[lastAdapterPosition].isExpanded = false
+                        notifyItemChanged(lastAdapterPosition)
+                    }
+                }
+
+
+
+
                 item.isExpanded = !item.isExpanded
                 notifyItemChanged(adapterPosition)
             }
@@ -65,13 +91,30 @@ class ExpandableAdapter(
     // Child ViewHolder
     inner class ChildViewHolder(itemView: View) : ViewHolder(itemView) {
         private val textView: TextView = itemView.findViewById(R.id.child_text_view)
-        private val grandChildRecyclerView: RecyclerView = itemView.findViewById(R.id.grandchild_recycler_view)
+        private val grandChildRecyclerView: RecyclerView =
+            itemView.findViewById(R.id.grandchild_recycler_view)
 
         override fun bind(item: MenuItem) {
             textView.text = item.menu.menuName
 
             // Click listener for expand/collapse functionality
             textView.setOnClickListener {
+
+                if (lastChildAdapterPosition == -1 && currentChildAdapterPosition == -1) {
+
+                    currentChildAdapterPosition = adapterPosition
+                    lastChildAdapterPosition = adapterPosition
+                } else {
+                    lastChildAdapterPosition = currentChildAdapterPosition
+                    currentChildAdapterPosition = adapterPosition
+                }
+
+                if (adapterPosition != lastChildAdapterPosition) {
+                    if (items[lastChildAdapterPosition].isExpanded) {
+                        items[lastChildAdapterPosition].isExpanded = false
+                        notifyItemChanged(lastChildAdapterPosition)
+                    }
+                }
                 item.isExpanded = !item.isExpanded
                 notifyItemChanged(adapterPosition)
             }
@@ -113,17 +156,20 @@ class ExpandableAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return when (viewType) {
             0 -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_parent, parent, false)
+                val view =
+                    LayoutInflater.from(parent.context).inflate(R.layout.item_parent, parent, false)
                 ParentViewHolder(view)
             }
 
             1 -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_child, parent, false)
+                val view =
+                    LayoutInflater.from(parent.context).inflate(R.layout.item_child, parent, false)
                 ChildViewHolder(view)
             }
 
             else -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_grandchild, parent, false)
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_grandchild, parent, false)
                 GrandChildViewHolder(view)
             }
         }

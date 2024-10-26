@@ -40,30 +40,35 @@ class MenuActivity2 : AppCompatActivity() {
         setUpToolBar()
 
 
-
+//
         val userDetails: HashMap<String, String> = HashMap()
         userDetails["user_id"] = "693"
         userDetails["auth"] = "b71a9d2ffff42ffa7f9cb2e26fe0d233"
+
+//        val userDetails: HashMap<String, String> = HashMap()
+//        userDetails["user_id"] = "74"
+//        userDetails["auth"] = "179e69fbdace6c0632bf49876d8a8a19"
+
+//        val userDetails: HashMap<String, String> = HashMap()
+//        userDetails["user_id"] = "605"
+//        userDetails["auth"] = "5f979c5909cdfd93a25603fca0f60753"
 
         viewModel = ViewModelProvider(this).get(ItemViewModel::class.java)
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        viewModel.menuItems.observe(this, { items ->
-
+        viewModel.menuItems.observe(this) { items ->
 
             adapter = ExpandableAdapter(items) { item ->
                 // Handle item click
                 Toast.makeText(this, "${item.menu.menuName} clicked", Toast.LENGTH_SHORT).show()
             }
             recyclerView.adapter = adapter
-        })
+        }
 
         // Fetch the items from API
         viewModel.fetchMenuItems(userDetails)
-
-
 
     }
 
